@@ -1,0 +1,71 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+**/.env
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build artifacts
+/build/
+/dist/
+/out/
+
+# Database files
+/*.sqlite
+/*.sqlite-journal
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Misc
+.npm/
+.yarn/
+.yarnrc.yml
+
+# Testing
+/coverage/
+/jest.config.js
+
+# Next.js specific
+.next/
+
+# React specific
+/.parcel-cache/
+
+# Docker
+.dockerignore
+/docker-compose.yml
+
+# Prisma
+/prisma/*.db
+/prisma/migrations/
+
+# MongoDB
+/mongodb/
+*.lock
+
+# Temporary files
+/tmp/
+/.temp/
