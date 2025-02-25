@@ -19,7 +19,7 @@ pnpm-debug.log*
 
 # Build artifacts
 /build/
-/dist/
+**/dist/** 
 /out/
 
 # Database files

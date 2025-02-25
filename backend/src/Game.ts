@@ -24,7 +24,7 @@ export class Game {
             color:"white"
          }
         }))
-        this.player1.send(JSON.stringify({
+        this.player2.send(JSON.stringify({
          type : INIT_GAME,
          payload:{
             color:"black"
