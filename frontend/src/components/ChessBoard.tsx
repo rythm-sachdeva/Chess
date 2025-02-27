@@ -50,8 +50,12 @@ const ChessBoard = ({board,socket,chess,setBoard}:{board:any,socket:WebSocket,ch
                                  }
                         }}
                         
-                        className={`w-10 h-10 cursor-pointer flex ${(i+j)%2===0? 'bg-[#779556]':'bg-[#EBECD0]'}  justify-center  items-center`}>
-                            {square ? square.type : ""}
+                        className={`w-16 h-16 cursor-pointer flex ${(i+j)%2===0? 'bg-[#779556]':'bg-[#c0c1a9]'}  justify-center  items-center`}>
+                           <div className="w-full justify-center flex h-full">
+                            <div className="h-full justify-center flex flex-col">
+                                {square ? <img className="w-8" src={`/${square?.color === "b" ? square?.type : `${square?.type?.toUpperCase()} copy`}.png`} /> : null} 
+                            </div>
+                        </div>
                         </div>
                     })
                 }

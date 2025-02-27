@@ -21,7 +21,7 @@ const Game = () => {
                     case INIT_GAME:
                         console.log("Game is initialized")
 
-                        setChess(new Chess());
+                        // setChess(new Chess());
                         setBoard(chess.board());
                         break;
                     case MOVE:
