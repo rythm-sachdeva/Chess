@@ -38,6 +38,7 @@ export class GameManager {
            console.log(data.toString());
           const message = JSON.parse(data.toString());
           console.log(message)
+          
           if(message.type === INIT_GAME)
              {
                if(this.pendingUser)
