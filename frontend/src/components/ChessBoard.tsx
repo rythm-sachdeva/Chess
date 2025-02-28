@@ -1,12 +1,15 @@
 import { Square } from "chess.js";
-import { useState } from "react";
+import { use, useState,useEffect, useRef } from "react";
 import { MOVE } from "../lib/constants";
+import { userStore } from "../store/userStore";
 
 const ChessBoard = ({board,socket,chess,setBoard}:{board:any,socket:WebSocket,chess:any,setBoard:any}) => {
     const [from,setFrom] = useState<null | Square>(null);
     const [to,setTo] = useState<null | Square>(null);
+    //@ts-ignore
+    const {yourColor} = userStore();
     // const socket = useSocket();
-   
+    
      
   return (
     <div>
@@ -50,10 +53,10 @@ const ChessBoard = ({board,socket,chess,setBoard}:{board:any,socket:WebSocket,ch
                                  }
                         }}
                         
-                        className={`w-16 h-16 cursor-pointer flex ${(i+j)%2===0? 'bg-[#779556]':'bg-[#c0c1a9]'}  justify-center  items-center`}>
+                        className={`w-10 h-10 md:w-16 md:h-16 cursor-pointer flex ${(i+j)%2===0? 'bg-[#779556]':'bg-[#c0c1a9]'}  justify-center  items-center`}>
                            <div className="w-full justify-center flex h-full">
                             <div className="h-full justify-center flex flex-col">
-                                {square ? <img className="w-8" src={`/${square?.color === "b" ? square?.type : `${square?.type?.toUpperCase()} copy`}.png`} /> : null} 
+                                {square ? <img  className={`w-5 md:w-8 ${yourColor == "black" ? 'rotate-180':'' }`} src={`/${square?.color === "b" ? square?.type : `${square?.type?.toUpperCase()} copy`}.png`} /> : null} 
                             </div>
                         </div>
                         </div>
